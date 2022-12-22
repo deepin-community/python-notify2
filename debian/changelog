@@ -1,0 +1,47 @@
+python-notify2 (0.3-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed homepage (https)
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #937956
+  * debian/control
+    - replace b-d on dbus-x11 with default-dbus-session-bus | dbus-session-bus;
+      Closes: #836292
+    - add libgtk-3-bin to b-d, needed for gtk-launch
+  * debian/runtests.sh
+    - launch notification-daemon via gtk-launch; Closes: #887515
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 12 Dec 2019 20:34:17 -0500
+
+python-notify2 (0.3-3) unstable; urgency=low
+
+  * Team upload.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Etienne Millon ]
+  * Run tests under dbus-run-session (Closes: #746103)
+  * Bump Standards-Version to 3.9.6 (no changes)
+
+  [ Piotr Ożarowski ]
+  * Add dh-python to Build-Depends
+
+ -- Etienne Millon <me@emillon.org>  Fri, 24 Oct 2014 15:32:39 +0200
+
+python-notify2 (0.3-2) unstable; urgency=low
+
+  * Fix for running test suite, courtesy of Jakub Wilk (Closes: #674351)
+
+ -- Thomas Kluyver <thomas@kluyver.me.uk>  Mon, 28 May 2012 11:06:00 +0100
+
+python-notify2 (0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #672799)
+
+ -- Thomas Kluyver <thomas@kluyver.me.uk>  Sun, 13 May 2012 18:29:32 +0100

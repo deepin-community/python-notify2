@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#DH_VERBOSE=1
+
+# This is needed on buildd so that dbus can use ~/.dbus
+export HOME = $(CURDIR)
+
+PYTHON3=$(shell py3versions -vr)
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
+	PYTHONS="$(PYTHON3)" dbus-run-session -- xvfb-run -a debian/runtests.sh
+endif
+
+build-python%:
+	python$* setup.py build
+
+override_dh_auto_build: $(PYTHON3:%=build-python%)
+	dh_auto_build
+
+install-python%:
+	python$* setup.py install --root=$(CURDIR)/debian/tmp --install-layout=deb
+
+override_dh_auto_install: $(PYTHON3:%=install-python%)
+	dh_auto_install
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf build
+	rm -rf *.egg-info
+	rm -rf .dbus

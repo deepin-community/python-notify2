@@ -1,0 +1,36 @@
+Source: python-notify2
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Thomas Kluyver <thomas@kluyver.me.uk>
+Build-Depends: debhelper (>= 8),
+               dh-python,
+               python3-all,
+               python3-dbus,
+               dbus,
+               default-dbus-session-bus | dbus-session-bus,
+               notification-daemon,
+               xvfb,
+               xauth,
+               python3-gi,
+               gir1.2-gdkpixbuf-2.0,
+               libgtk-3-bin
+Standards-Version: 3.9.6
+Homepage: https://pypi.python.org/pypi/notify2
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-notify2.git
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-notify2
+
+Package: python3-notify2
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-dbus
+Recommends: notification-daemon
+Description: desktop notifications API for Python 3
+ notify2 provides a Python interface to the Freedesktop notifications system,
+ which allows programs to display information to the user in an unobtrusive way.
+ Notifications are sent over DBus to a notification daemon, which is responsible
+ for presenting them to the user.
+ .
+ notify2 is intended as a replacement for pynotify (package python-notify), and
+ its interface is largely copied from there, although it isn't a complete clone.
+ .
+ This is the Python 3 version of the package.
