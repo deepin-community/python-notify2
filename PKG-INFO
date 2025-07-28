@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: notify2
-Version: 0.3
+Version: 0.3.1
 Summary: Python interface to DBus notifications
 Home-page: https://bitbucket.org/takluyver/pynotify2
 Author: Thomas Kluyver
@@ -18,7 +18,8 @@ Description: This is a pure-python replacement for notify-python, using python-d
                                     )
             n.show()
         
-        To see more of what's possible, refer to docstrings of methods and objects.
+        API docs are `available on ReadTheDocs <https://notify2.readthedocs.org/en/latest/>`_,
+        or you can refer to docstrings.
         
         Based on the notifications spec at:
         http://developer.gnome.org/notification-spec/

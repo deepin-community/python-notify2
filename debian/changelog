@@ -1,3 +1,32 @@
+python-notify2 (0.3.1-1) unstable; urgency=medium
+
+  * Team Upload
+  * New upstream version 0.3.1 (Closes: #1078727)
+  * Add build-dep on python3-setuptools (Closes: #1080751)
+  * Use dh-sequence-python3
+  * Set Rules-Requires-Root: no
+
+ -- Alexandre Detiste <tchet@debian.org>  Fri, 11 Oct 2024 12:32:13 +0200
+
+python-notify2 (0.3-5) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Use secure URI in debian/watch.
+  * Bump debhelper from deprecated 8 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 03 Jun 2022 23:06:06 -0400
+
 python-notify2 (0.3-4) unstable; urgency=medium
 
   [ Ondřej Nový ]
